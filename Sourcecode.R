@@ -26,11 +26,11 @@ size = 20
 prob = 0.2
 
 ## a
-dbinom(x, size, prob) ;data2
+dbinom(x, size, prob)
 
 ## b
 n = 100
-data2 = rbinom(n, size, prob)
+data2 = rbinom(n, size, prob) ;data2
 hist(data2)
 
 ## c
@@ -47,10 +47,11 @@ dpois(x, lambda)
 ## b
 n = 365
 data3 = rpois(n, lambda) ;data3
+
 hist(data3)
 
 ## c
-
+mean(data3 == 6)
 
 ## d
 mean(data3)
@@ -66,6 +67,7 @@ dchisq(x, df)
 ## b
 n = 100
 data4 = rchisq(n, df) ;data4
+
 hist(data4)
 
 ## c
@@ -80,10 +82,10 @@ dexp(x)
 
 ## b
 set.seed(1)
-hist(rexp(10,3))
-hist(rexp(100,3))
-hist(rexp(1000,3))
-hist(rexp(10000,3))
+hist(rexp(10, x))
+hist(rexp(100, x))
+hist(rexp(1000, x))
+hist(rexp(10000, x))
 
 ## c
 n = 100
@@ -100,14 +102,15 @@ sd = 8
 data5 = rnorm(n, mean, sd) ;data5
 
 mean(data5)
-x1 = 49
-x2 = 50
+X1 = 49
+X2 = 50
 
-z2 = (50-mean(data5))/sd(data5) ;z2
-z1 = 1-((49-mean(data5))/sd(data5)) ;z1
-z = z1 +z2 ;z
+Z2 = (50-mean(data5))/sd(data5) ;Z2
+Z1 = 1-((49-mean(data5))/sd(data5)) ;Z1
+Z = Z1 +Z2 ;Z
 
 plot(data5, main = "Plot Data5", col = "blue", pch = 1)
+
 ## b
 hist(data5, main = "5025201228_Arief Badrus Sholeh_Probstat_E_DNHistogram", breaks = 5, col = "blue")
 
