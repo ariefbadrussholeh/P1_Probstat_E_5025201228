@@ -361,14 +361,15 @@ sd = 8
 data5 = rnorm(n, mean, sd) ;data5
 
 mean(data5)
-X1 = 49
-X2 = 50
 
-Z2 = (50-mean(data5))/sd(data5) ;Z2
-Z1 = 1-((49-mean(data5))/sd(data5)) ;Z1
+X1 = 50
+X2 = 51
+
+Z2 = (X2-mean(data5))/sd(data5) ;Z2
+Z1 = 1-((X1-mean(data5))/sd(data5)) ;Z1
 Z = Z1 +Z2 ;Z
 
-plot(data5, main = "Plot Data5", col = "blue", pch = 1)
+plot(data5, main = "Plot Data5", col = "salmon", pch = 1)
 ```
 
 ![6.a](screenshot/6.a.png)
@@ -378,7 +379,7 @@ plot(data5, main = "Plot Data5", col = "blue", pch = 1)
 **Hasil** : 
 - Z-score = 1.123113
 
-**Penjelasan** :
+**Penjelasan** : Karena default Z-score pada distribusi normal untuk `P(x<=X2)` sehingga untuk mendapatkan `P(X1<=x<=X2)` adalah dengan `P(x<=X2) + (1 - P(x<=X1))` karena `(1 - P(x<=X1)) = P(x>=X1)`. Kemudian menggunakan fungsi `plot()` untuk plot data generate randomnya dalam bentuk grafik
 
 
 ### 6.b
@@ -386,12 +387,12 @@ Generate Histogram dari Distribusi Normal dengan breaks 50
 
 ``` r
 ## b
-hist(data5, main = "5025201228_Arief Badrus Sholeh_Probstat_E_DNHistogram", breaks = 5, col = "blue")
+hist(data5, main = "5025201228_Arief Badrus Sholeh_Probstat_E_DNHistogram", breaks = 50, col = "salmon")
 ```
 
 ![6.b](/5025201228_Arief%20Badrus%20Sholeh_Probstat_E_DNHistogram.png)
 
-**Penjelasan** : Menggunkan fungsi `hist()` untuk meng-Generate histogram distribusi normal dengan `breaks = 5`.
+**Penjelasan** : Menggunkan fungsi `hist()` untuk meng-Generate histogram distribusi normal dengan `breaks = 50`.
 
 ### 6.c
 Nilai Varian (σ²) dari hasil generate random nilai Distribusi Normal.
@@ -409,3 +410,5 @@ var(data5)
 **Penjelasan** : Menggunakan fungsi `var()` untuk mencari nilai varian dari `data5`.
 
 ***
+
+ Sekian dan Terima Kasih
