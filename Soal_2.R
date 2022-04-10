@@ -9,8 +9,10 @@ dbinom(x, size, prob)
 ## b
 n = 100
 data2 = rbinom(n, size, prob) ;data2
-hist(data2)
+
+hist(data2, main = "Histogram Binomial", col = "green")
 
 ## c
-mean(data2)
-var(data2)
+mean = size * prob ;mean
+
+var = size * prob * (1 - prob) ;var

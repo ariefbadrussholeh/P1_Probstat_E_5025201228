@@ -117,31 +117,33 @@ Gambarkan grafik histogram berdasarkan kasus tersebut.
 ## b
 n = 100
 data2 = rbinom(n, size, prob) ;data2
-hist(data2)
+
+hist(data2, main = "Histogram Binomial", col = "green")
 ```
 
 ![2.b](screenshot/2.b.png)
 
 ![2.b.1](screenshot/2.b.1.png)
 
-**Penjelasan** : Menggunakan fungsi `rbinom()` untuk mencari distribusi binomial dengan n data random (karena tidak disebutkan disoal, mengambil nilai sembarang `n = 100`) dan fungsi `hist()` untuk membuat histogram distribusi binomial dari `data2`.
+**Penjelasan** : Menggunakan fungsi `rbinom()` untuk mencari distribusi binomial dengan n data random (karena tidak disebutkan disoal, maka mengambil nilai sembarang `n = 100`) dan fungsi `hist()` untuk membuat histogram distribusi binomial dari `data2`.
 
 ### 2.c
 Nilai Rataan (μ) dan Varian (σ²) dari DistribusiBinomial.
 
 ``` r
 ## c
-mean(data2)
-var(data2)
+mean = size * prob ;mean
+
+var = size * prob * (1 - prob) ;var
 ```
 
 ![2.c](screenshot/2.c.png)
 
 **Hasil** :
-- Rataan (μ)  = 3.98
-- Varian (σ²) = 3.252121
+- Rataan (μ)  = 4
+- Varian (σ²) = 3.2
 
-**Penjelasan** : Menggunakan fungsi `mean()` dan `var()` untuk mencari nilai rataan dan varian dari `data2`.
+**Penjelasan** : Untuk mencari mean pada distribusi geometrik menggunakan rumus `n*p` sedangkan untuk mencari varian mengunakan rumus `n*p*(1 - p)`..
 
 ***
 
