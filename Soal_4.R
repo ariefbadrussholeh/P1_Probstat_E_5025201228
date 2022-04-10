@@ -9,8 +9,9 @@ dchisq(x, df)
 n = 100
 data4 = rchisq(n, df) ;data4
 
-hist(data4)
+hist(data4, main = "Histogram Chi-Square", col = "yellow")
 
 ## c
-mean(data4)
-var(data4)
+mean = df ;mean
+
+var = 2*df ;var

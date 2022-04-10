@@ -143,7 +143,7 @@ var = size * prob * (1 - prob) ;var
 - Rataan (μ)  = 4
 - Varian (σ²) = 3.2
 
-**Penjelasan** : Untuk mencari mean pada distribusi geometrik menggunakan rumus `n*p` sedangkan untuk mencari varian mengunakan rumus `n*p*(1 - p)`..
+**Penjelasan** : Untuk mencari mean pada distribusi geometrik menggunakan rumus `n*p` sedangkan untuk mencari varian mengunakan rumus `n*p*(1 - p)`.
 
 ***
 
@@ -251,7 +251,7 @@ Histogram dari Distribusi Chi-Square dengan 100 data random.
 n = 100
 data4 = rchisq(n, df) ;data4
 
-hist(data4)
+hist(data4, main = "Histogram Chi-Square", col = "yellow")
 ```
 
 ![4.b](screenshot/4.b.png)
@@ -265,17 +265,18 @@ Nilai Rataan (μ) dan Varian (σ²) dari DistribusiChi-Square.
 
 ``` r
 ## c
-mean(data4)
-var(data4)
+mean = df ;mean
+
+var = 2*df ;var
 ```
 
 ![4.c](screenshot/4.c.png)
 
 **Hasil** :
-- Rataan (μ)  = 10.19431 
-- Varian (σ²) = 23.1238
+- Rataan (μ)  = 10
+- Varian (σ²) = 20
 
-**Penjelasan** : Menggunakan fungsi `mean()` dan `var()` untuk mencari nilai rataan dan varian dari `data4`.
+**Penjelasan** : Nilai mean pada distribusi chi-square sama dengan nilai `v` (dalam hal ini `df`) sedangkan untuk mencari varian mengunakan rumus `2*v`.
 
 ***
 
