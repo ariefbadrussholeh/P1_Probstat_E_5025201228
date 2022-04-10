@@ -11,11 +11,12 @@ data1 = rgeom(n, prob) ;data1
 mean(data1 == 3)
 
 ## c
-
+## Penjelasan di Github
 
 ## d
-hist(data1)
+hist(data1, main = "Histogram Geometrik", col = 'red')
 
 ## e
-mean(data1)
-var(data1)
+mean = 1/prob ;mean
+
+var = (1-prob)/prob^2 ;var

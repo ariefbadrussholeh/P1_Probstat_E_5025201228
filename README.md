@@ -46,7 +46,7 @@ mean(data1 == 3)
 
 ![1.b](screenshot/1.b.png)
 
-**Hasil** : 0.1067
+**Hasil** : 0.1026
 
 **Penjelasan** : Menggunakan fungsi `rgeom()` untuk mencari distribusi geometrik dengan n data random, kemudian dicari `mean()` untuk `X == 3`.
 
@@ -55,14 +55,14 @@ Bandingkan Hasil poin a dan b , apa kesimpulan yang bisa didapatkan?
 
 **Jawab** :
 
-Berdasarkan perhitungan ataupun nilai bangkitan, fungsi probabilitasnya memiliki rentang nilai yang tidak berbeda, dimana hasil pada poin a adalah 0.1024 dan poin b adalah 0.1067.
+Berdasarkan perhitungan ataupun nilai bangkitan, fungsi probabilitasnya memiliki rentang nilai yang tidak berbeda, dimana hasil pada poin a adalah 0.1024 dan poin b adalah 0.1026.
 
 ### 1.d
 Histogram Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama
 
 ``` r
 ## d
-hist(data1)
+hist(data1, main = "Histogram Geometrik", col = 'red')
 ```
 
 ![1.d](screenshot/1.d.png)
@@ -74,17 +74,18 @@ Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
 
 ``` r
 ## e
-mean(data1)
-var(data1)
+mean = 1/prob ;mean
+
+var = (1-prob)/prob^2 ;var
 ```
 
 ![1.e](screenshot/1.e.png)
 
 **Hasil** : 
-- Rataan (μ)  = 3.9981
-- Varian (σ²) = 19.74407
+- Rataan (μ)  = 5
+- Varian (σ²) = 20
 
-**Penjelasan** : Menggunakan fungsi `mean()` dan `var()` untuk mencari nilai rataan dan varian dari `data1`.
+**Penjelasan** : Untuk mencari mean pada distribusi geometrik menggunakan rumus `1/p` sedangkan untuk mencari varian mengunakan rumus `(1-p)/p^2`.
 
 ***
 
