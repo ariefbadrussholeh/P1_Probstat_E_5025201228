@@ -7,7 +7,7 @@ dgeom(x, prob)
 
 ## b
 n = 10000
-data1 = rgeom(n, prob)
+data1 = rgeom(n, prob) ;data1
 mean(data1 == 3)
 
 ## c
