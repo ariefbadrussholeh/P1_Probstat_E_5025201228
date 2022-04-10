@@ -128,7 +128,7 @@ hist(data2, main = "Histogram Binomial", col = "green")
 **Penjelasan** : Menggunakan fungsi `rbinom()` untuk mencari distribusi binomial dengan n data random (karena tidak disebutkan disoal, maka mengambil nilai sembarang `n = 100`) dan fungsi `hist()` untuk membuat histogram distribusi binomial dari `data2`.
 
 ### 2.c
-Nilai Rataan (μ) dan Varian (σ²) dari DistribusiBinomial.
+Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Binomial.
 
 ``` r
 ## c
@@ -176,7 +176,7 @@ setahun (n = 365)
 n = 365
 data3 = rpois(n, lambda) ;data3
 
-hist(data3)
+hist(data3, main = "Histogram Poisson", col = "blue")
 ```
 
 ![3.b](screenshot/3.b.png)
@@ -195,11 +195,12 @@ Jika kita cari nilai rata-rata untuk distribusi poisson pada poin b dengan mengg
 ``` r
 ## c
 mean(data3 == 6)
+## Penjelasan ada di Github
 ```
 
 ![3.c](screenshot/3.c.png)
 
-Maka nilai yang diperoleh adalah 0.1342466.
+Maka nilai yang diperoleh adalah 0.1424658.
 
 Dapat diambil kesuimpulan bahwa berdasarkan perhitungan ataupun nilai bangkitan, fungsi probabilitasnya memiliki rentang nilai yang tidak berbeda, dimana hasil pada poin a adalah 0.1281201.
 
@@ -209,17 +210,18 @@ Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.
 
 ``` r
 ## d
-mean(data3)
-var(data3)
+mean = lambda ;mean
+
+var = lambda ;var
 ```
 
 ![3.d](screenshot/3.d.png)
 
 **Hasil** :
-- Rataan (μ)  = 4.575342
-- Varian (σ²) = 4.201039
+- Rataan (μ)  = 4.5
+- Varian (σ²) = 4.5
 
-***Penjelasan** : Menggunakan fungsi `mean()` dan `var()` untuk mencari nilai rataan dan varian dari `data3`.
+***Penjelasan** : Nilai rataan dan varian pada distribusi poisson sama dengan nilal `lambda`.
 
 ## Soal 4
 Diketahui nilai x = 2 dan v = 10. Tentukan:
