@@ -290,12 +290,12 @@ Fungsi Probabilitas dari Distribusi Exponensial
 x = 3
 
 ## a
-dexp(x)
+dexp(1, x)
 ```
 
 ![5.a](screenshot/5.a.png)
 
-**Hasil** : 0.04978707
+**Hasil** : 0.1493612
 
 **Penjelasan** : Menggunakan fungsi `dexp()` untuk mencari distribusi exponensial dengan diketahui nilai `x = 3`.
 
@@ -303,12 +303,13 @@ dexp(x)
 Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
 
 ``` r
+
 ## b
 set.seed(1)
-hist(rexp(10, x))
-hist(rexp(100, x))
-hist(rexp(1000, x))
-hist(rexp(10000, x))
+hist(rexp(10, x), main = "Histogram Exponential (n = 10)", col = "cyan")
+hist(rexp(100, x), main = "Histogram Exponential (n = 100)", col = "cyan")
+hist(rexp(1000, x), main = "Histogram Exponential (n = 1000)", col = "cyan")
+hist(rexp(10000, x), main = "Histogram Exponential (n = 10000)", col = "cyan")
 ```
 
 - `n = 10`
@@ -329,7 +330,9 @@ Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 da
 ## c
 n = 100
 data5 = rexp(n, x)
+
 mean(data5)
+
 var(data5)
 ```
 
